@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwitTech.DotNetCoreApp.Data
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{CB78509F-6DEE-444F-A377-5034A23D9F61}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\dotnetcore-api-app-2023013012295.yml = .github\workflows\dotnetcore-api-app-2023013012295.yml
+		.github\workflows\dotnetcore-api-app-2023013012295-AutoDeployTrigger-d35c3221-6f0c-4747-bfe5-d137581a6f9f.yml = .github\workflows\dotnetcore-api-app-2023013012295-AutoDeployTrigger-d35c3221-6f0c-4747-bfe5-d137581a6f9f.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2CD127B7-8FA1-4D44-847B-D86EA93801F8}"

@@ -8,9 +8,9 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["src/DwitTech.DotNetCoreApp.WebApi/DwitTech.DotNetCoreApp.WebApi.csproj", "DwitTech.DotNetCoreApp.WebApi/"]
-RUN dotnet restore "src/DwitTech.DotNetCoreApp.WebApi/DwitTech.DotNetCoreApp.WebApi.csproj"
 COPY . .
-WORKDIR "/src/DwitTech.DotNetCoreApp.WebApi"
+WORKDIR "/DwitTech.DotNetCoreApp.WebApi"
+RUN dotnet restore "DwitTech.DotNetCoreApp.WebApi.csproj"
 RUN dotnet build "DwitTech.DotNetCoreApp.WebApi.csproj" -c Release -o /app/build
 
 FROM build AS publish

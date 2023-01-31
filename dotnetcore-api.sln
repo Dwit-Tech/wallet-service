@@ -19,6 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwitTech.DotNetCoreApp.Core
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwitTech.DotNetCoreApp.Data.Tests", "tests\DwitTech.DotNetCoreApp.Data.Tests\DwitTech.DotNetCoreApp.Data.Tests.csproj", "{D3CA6EB7-DD9A-4051-91C7-4EDB42AB5E87}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{CB78509F-6DEE-444F-A377-5034A23D9F61}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnetcore-api-app-2023013012295.yml = .github\workflows\dotnetcore-api-app-2023013012295.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

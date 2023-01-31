@@ -8,7 +8,7 @@ env:
   CONTAINER_APP_NAME: dotnetcore-api-app-2023013012295
   CONTAINER_APP_RESOURCE_GROUP_NAME: dwit-tech
   CONTAINER_REGISTRY_LOGIN_SERVER: dotnetcoreapi20230130123723.azurecr.io
-  DOCKER_FILE_PATH: src/DwitTech.DotNetCoreApp.WebApi/Dockerfile
+  DOCKER_FILE_PATH: Dockerfile
   PROJECT_NAME_FOR_DOCKER: dotnetcoreapi
 jobs:
   build:

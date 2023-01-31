@@ -9,7 +9,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["src/DwitTech.DotNetCoreApp.WebApi/DwitTech.DotNetCoreApp.WebApi.csproj", "DwitTech.DotNetCoreApp.WebApi/"]
 COPY . .
-WORKDIR "/DwitTech.DotNetCoreApp.WebApi"
+WORKDIR "src/DwitTech.DotNetCoreApp.WebApi"
 RUN dotnet restore "DwitTech.DotNetCoreApp.WebApi.csproj"
 RUN dotnet build "DwitTech.DotNetCoreApp.WebApi.csproj" -c Release -o /app/build
 

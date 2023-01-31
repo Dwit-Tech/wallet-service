@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace dotnetcore_api
+namespace DwitTech.DotNetCoreApp.WebApi
 {
     public class Program
     {

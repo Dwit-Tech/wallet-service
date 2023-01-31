@@ -24,7 +24,7 @@ namespace Microsoft.Extensions.DependencyInjection
                 using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
                 {
                     var context = serviceScope.ServiceProvider.GetService<DefaultDbContext>();
-                    context.Database.Migrate();
+                    //context.Database.Migrate();
                 }
             }
             catch (Exception ex)

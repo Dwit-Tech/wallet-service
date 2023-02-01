@@ -1,4 +1,4 @@
-namespace dotnetcore_api
+namespace DwitTech.DotNetCoreApp.Core.Dtos
 {
     public class WeatherForecast
     {

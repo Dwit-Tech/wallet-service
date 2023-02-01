@@ -44,6 +44,9 @@ namespace DwitTech.DotNetCoreApp.WebApi
                         .AllowAnyHeader()
                         .AllowCredentials());
             });
+            builder.Services.ConfigureAuthentication(builder.Configuration);
+
+            builder.Services.AddAuthorization();
 
             var app = builder.Build();
 

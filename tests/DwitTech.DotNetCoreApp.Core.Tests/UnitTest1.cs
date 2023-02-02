@@ -1,4 +1,4 @@
-namespace DwitTech.DotNetCoreApp.Core.Tests
+namespace DwitTech.WalletService.Core.Tests
 {
     public class UnitTest1
     {

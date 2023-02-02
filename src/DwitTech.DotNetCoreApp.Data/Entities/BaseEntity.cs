@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DwitTech.DotNetCoreApp.Data.Entities
+namespace DwitTech.WalletService.Data.Entities
 {
     public class BaseEntity
     {

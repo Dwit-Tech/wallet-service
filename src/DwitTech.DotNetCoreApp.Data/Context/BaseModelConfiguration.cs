@@ -1,4 +1,4 @@
-﻿using DwitTech.DotNetCoreApp.Data.Entities;
+﻿using DwitTech.WalletService.Data.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DwitTech.DotNetCoreApp.Data.Context
+namespace DwitTech.WalletService.Data.Context
 {
     public class BaseModelConfiguration<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : BaseEntity
     {

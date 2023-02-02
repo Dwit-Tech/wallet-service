@@ -1,4 +1,4 @@
-﻿using DwitTech.WalletService.Data.Context;
+﻿using DwitTech.WalletService.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -27,5 +27,12 @@ namespace Microsoft.Extensions.DependencyInjection
 
             return app;
         }
+    }
+}
+
+namespace DwitTech.WalletService.Core
+{
+    class DefaultDbContext
+    {
     }
 }

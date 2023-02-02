@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace DwitTech.DotNetCoreApp.Data.Context
+namespace DwitTech.WalletService.Data.Context
 {
     public class DefaultDbContext : DbContext
     {

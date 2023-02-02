@@ -1,7 +1,7 @@
-using DwitTech.DotNetCoreApp.Core.Dtos;
+using DwitTech.WalletService.Core.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DwitTech.DotNetCoreApp.WebApi.Controllers
+namespace DwitTech.WalletService.WebApi.Controllers
 {
     public class WeatherForecastController : BaseController
     {
@@ -28,5 +28,12 @@ namespace DwitTech.DotNetCoreApp.WebApi.Controllers
             })
             .ToArray();
         }
+    }
+}
+
+namespace DwitTech.WalletService.WebApi
+{
+    public class BaseController
+    {
     }
 }

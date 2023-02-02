@@ -7,17 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6C1480BF-9B2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{12DE9949-1F6F-4643-8E5B-D9F9C2FFD4F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.DotNetCoreApp.WebApi", "src\DwitTech.DotNetCoreApp.WebApi\DwitTech.DotNetCoreApp.WebApi.csproj", "{B3DBF1DD-67CE-4C7E-BD5E-27633D3DC5D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.WebApi", "src\DwitTech.DotNetCoreApp.WebApi\DwitTech.WalletService.WebApi.csproj", "{B3DBF1DD-67CE-4C7E-BD5E-27633D3DC5D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwitTech.DotNetCoreApp.Core", "src\DwitTech.DotNetCoreApp.Core\DwitTech.DotNetCoreApp.Core.csproj", "{49F8F93B-418D-4E23-B905-B4CDC24407F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.Core", "src\DwitTech.DotNetCoreApp.Core\DwitTech.WalletService.Core.csproj", "{49F8F93B-418D-4E23-B905-B4CDC24407F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwitTech.DotNetCoreApp.Data", "src\DwitTech.DotNetCoreApp.Data\DwitTech.DotNetCoreApp.Data.csproj", "{D3BCF3D3-4587-43E6-A015-507D57E877BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.Data", "src\DwitTech.DotNetCoreApp.Data\DwitTech.WalletService.Data.csproj", "{D3BCF3D3-4587-43E6-A015-507D57E877BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwitTech.DotNetCoreApp.WebApi.Tests", "tests\DwitTech.DotNetCoreApp.WebApi.Tests\DwitTech.DotNetCoreApp.WebApi.Tests.csproj", "{701968A1-C9CB-43E1-A12D-5D7901D3FE65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.WebApi.Tests", "tests\DwitTech.DotNetCoreApp.WebApi.Tests\DwitTech.WalletService.WebApi.Tests.csproj", "{701968A1-C9CB-43E1-A12D-5D7901D3FE65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwitTech.DotNetCoreApp.Core.Tests", "tests\DwitTech.DotNetCoreApp.Core.Tests\DwitTech.DotNetCoreApp.Core.Tests.csproj", "{535D423B-3EE8-43DA-A2C3-3171583B2384}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTechWalletService.Core.Tests", "tests\DwitTech.DotNetCoreApp.Core.Tests\DwitTechWalletService.Core.Tests.csproj", "{535D423B-3EE8-43DA-A2C3-3171583B2384}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DwitTech.DotNetCoreApp.Data.Tests", "tests\DwitTech.DotNetCoreApp.Data.Tests\DwitTech.DotNetCoreApp.Data.Tests.csproj", "{D3CA6EB7-DD9A-4051-91C7-4EDB42AB5E87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.Data.Tests", "tests\DwitTech.DotNetCoreApp.Data.Tests\DwitTech.WalletService.Data.Tests.csproj", "{D3CA6EB7-DD9A-4051-91C7-4EDB42AB5E87}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{CB78509F-6DEE-444F-A377-5034A23D9F61}"
 	ProjectSection(SolutionItems) = preProject

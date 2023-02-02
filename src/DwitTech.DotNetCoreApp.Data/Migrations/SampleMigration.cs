@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DwitTech.DotNetCoreApp.Data.Migrations
+namespace DwitTech.WalletService.Data.Migrations
 {
     internal class SampleMigration
     {

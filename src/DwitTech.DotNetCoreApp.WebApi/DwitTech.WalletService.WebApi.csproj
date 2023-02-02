@@ -1,10 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>DwitTech.DotNetCoreApp.WebApi</RootNamespace>
+    <RootNamespace>DwitTech.WalletService.WebApi</RootNamespace>
     <UserSecretsId>4b85aef6-9eee-4358-9027-2f921b1a3891</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DwitTech.DotNetCoreApp.Core\DwitTech.DotNetCoreApp.Core.csproj" />
+    <ProjectReference Include="..\DwitTech.WalletService.Core\DwitTech.WalletService.Core.csproj" />
   </ItemGroup>
 
 </Project>

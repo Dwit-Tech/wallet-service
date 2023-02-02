@@ -1,4 +1,4 @@
-namespace DwitTech.DotNetCoreApp.Core.Dtos
+namespace DwitTech.WalletService.Core.Dtos
 {
     public class WeatherForecast
     {

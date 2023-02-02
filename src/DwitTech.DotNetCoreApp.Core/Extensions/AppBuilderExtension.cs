@@ -1,4 +1,4 @@
-﻿using DwitTech.DotNetCoreApp.Data.Context;
+﻿using DwitTech.WalletService.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;

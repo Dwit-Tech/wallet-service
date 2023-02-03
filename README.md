@@ -7,7 +7,7 @@ Wallet Service Application for payment orders
 
 * Rename Projects
 
-* Find and replace DotNetCoreApp
+* Find and replace WalletService
 
 * Rename Db connection string
 

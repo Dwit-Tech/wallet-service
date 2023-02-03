@@ -7,17 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6C1480BF-9B2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{12DE9949-1F6F-4643-8E5B-D9F9C2FFD4F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.WebApi", "src\DwitTech.DotNetCoreApp.WebApi\DwitTech.WalletService.WebApi.csproj", "{B3DBF1DD-67CE-4C7E-BD5E-27633D3DC5D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.WebApi", "src\DwitTech.WalletService.WebApi\DwitTech.WalletService.WebApi.csproj", "{B3DBF1DD-67CE-4C7E-BD5E-27633D3DC5D3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.Core", "src\DwitTech.DotNetCoreApp.Core\DwitTech.WalletService.Core.csproj", "{49F8F93B-418D-4E23-B905-B4CDC24407F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.Core", "src\DwitTech.WalletService.Core\DwitTech.WalletService.Core.csproj", "{49F8F93B-418D-4E23-B905-B4CDC24407F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.Data", "src\DwitTech.DotNetCoreApp.Data\DwitTech.WalletService.Data.csproj", "{D3BCF3D3-4587-43E6-A015-507D57E877BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.Data", "src\DwitTech.WalletService.Data\DwitTech.WalletService.Data.csproj", "{D3BCF3D3-4587-43E6-A015-507D57E877BC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.WebApi.Tests", "tests\DwitTech.DotNetCoreApp.WebApi.Tests\DwitTech.WalletService.WebApi.Tests.csproj", "{701968A1-C9CB-43E1-A12D-5D7901D3FE65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.WebApi.Tests", "tests\DwitTech.WalletService.WebApi.Tests\DwitTech.WalletService.WebApi.Tests.csproj", "{701968A1-C9CB-43E1-A12D-5D7901D3FE65}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTechWalletService.Core.Tests", "tests\DwitTech.DotNetCoreApp.Core.Tests\DwitTechWalletService.Core.Tests.csproj", "{535D423B-3EE8-43DA-A2C3-3171583B2384}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.Data.Tests", "tests\DwitTech.DotNetCoreApp.Data.Tests\DwitTech.WalletService.Data.Tests.csproj", "{D3CA6EB7-DD9A-4051-91C7-4EDB42AB5E87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.Data.Tests", "tests\DwitTech.WalletService.Data.Tests\DwitTech.WalletService.Data.Tests.csproj", "{D3CA6EB7-DD9A-4051-91C7-4EDB42AB5E87}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{CB78509F-6DEE-444F-A377-5034A23D9F61}"
 	ProjectSection(SolutionItems) = preProject
@@ -29,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Dockerfile = Dockerfile
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.Core.Tests", "tests\DwitTech.WalletService.Core.Tests\DwitTech.WalletService.Core.Tests.csproj", "{75BF13C0-56DA-40E8-A633-7290A4DA8668}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,14 +52,14 @@ Global
 		{701968A1-C9CB-43E1-A12D-5D7901D3FE65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{701968A1-C9CB-43E1-A12D-5D7901D3FE65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{701968A1-C9CB-43E1-A12D-5D7901D3FE65}.Release|Any CPU.Build.0 = Release|Any CPU
-		{535D423B-3EE8-43DA-A2C3-3171583B2384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{535D423B-3EE8-43DA-A2C3-3171583B2384}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{535D423B-3EE8-43DA-A2C3-3171583B2384}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{535D423B-3EE8-43DA-A2C3-3171583B2384}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D3CA6EB7-DD9A-4051-91C7-4EDB42AB5E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D3CA6EB7-DD9A-4051-91C7-4EDB42AB5E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3CA6EB7-DD9A-4051-91C7-4EDB42AB5E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3CA6EB7-DD9A-4051-91C7-4EDB42AB5E87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75BF13C0-56DA-40E8-A633-7290A4DA8668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BF13C0-56DA-40E8-A633-7290A4DA8668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BF13C0-56DA-40E8-A633-7290A4DA8668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BF13C0-56DA-40E8-A633-7290A4DA8668}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,8 +69,8 @@ Global
 		{49F8F93B-418D-4E23-B905-B4CDC24407F7} = {6C1480BF-9B2F-419C-A437-24237CF52BD1}
 		{D3BCF3D3-4587-43E6-A015-507D57E877BC} = {6C1480BF-9B2F-419C-A437-24237CF52BD1}
 		{701968A1-C9CB-43E1-A12D-5D7901D3FE65} = {12DE9949-1F6F-4643-8E5B-D9F9C2FFD4F4}
-		{535D423B-3EE8-43DA-A2C3-3171583B2384} = {12DE9949-1F6F-4643-8E5B-D9F9C2FFD4F4}
 		{D3CA6EB7-DD9A-4051-91C7-4EDB42AB5E87} = {12DE9949-1F6F-4643-8E5B-D9F9C2FFD4F4}
+		{75BF13C0-56DA-40E8-A633-7290A4DA8668} = {12DE9949-1F6F-4643-8E5B-D9F9C2FFD4F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A9E9250-9D79-4FB6-B26F-FBCB93A7C7BC}

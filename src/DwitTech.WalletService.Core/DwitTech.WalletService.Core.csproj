@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DwitTech.WalletService.Data\DwitTech.WalletService.Data.csproj" />
-    <ProjectReference Include="..\DwitTech.WalletService.Data\DwitTech.WalletService.Data.csproj" />
   </ItemGroup>
 
 </Project>

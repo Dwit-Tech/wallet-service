@@ -30,10 +30,3 @@ namespace DwitTech.WalletService.WebApi.Controllers
         }
     }
 }
-
-namespace DwitTech.WalletService.WebApi
-{
-    public class BaseController
-    {
-    }
-}

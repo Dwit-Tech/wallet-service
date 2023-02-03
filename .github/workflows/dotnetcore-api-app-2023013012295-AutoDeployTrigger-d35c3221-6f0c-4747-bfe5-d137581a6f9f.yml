@@ -1,5 +1,4 @@
-name: Trigger auto deployment for dotnetcore-api-app-2023013012295
-
+name: Trigger auto deployment for dwittechwalletservicewebapi-app
 # When this action will be executed
 on:
   # Automatically trigger it when detected changes in repo
@@ -8,10 +7,10 @@ on:
       [ master ]
     paths:
     - '**'
-    - '.github/workflows/dotnetcore-api-app-2023013012295-AutoDeployTrigger-d35c3221-6f0c-4747-bfe5-d137581a6f9f.yml'
+    - '.github/workflows/dwittechwalletservicewebapi-app-AutoDeployTrigger-d35c3221-6f0c-4747-bfe5-d137581a6f9f.yml'
 
   # Allow mannually trigger 
-  workflow_dispatch:      
+  workflow_dispatch:    
 
 jobs:
   build:
@@ -28,14 +27,14 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: dotnetcoreapi20230130123723.azurecr.io
-          username: ${{ secrets.DOTNETCOREAPIAPP2023013012295_REGISTRY_USERNAME }}
-          password: ${{ secrets.DOTNETCOREAPIAPP2023013012295_REGISTRY_PASSWORD }}
+          username: ${{ secrets.DWITTECHWALLETSERVICEWEBAPIAPP_REGISTRY_USERNAME }}
+          password: ${{ secrets.DWITTECHWALLETSERVICEWEBAPIAPP_REGISTRY_PASSWORD }}
 
       - name: Build and push container image to registry
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: dotnetcoreapi20230130123723.azurecr.io/dotnetcore-api-app-2023013012295:${{ github.sha }}
+          tags: dotnetcoreapi20230130123723.azurecr.io/dwittechwalletservicewebapi-app:${{ github.sha }}
           file: ./Dockerfile
           context: ./
 
@@ -48,7 +47,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.DOTNETCOREAPIAPP2023013012295_AZURE_CREDENTIALS }}
+          creds: ${{ secrets.DWITTECHWALLETSERVICEWEBAPIAPP_AZURE_CREDENTIALS }}
 
 
       - name: Deploy to containerapp
@@ -56,5 +55,5 @@ jobs:
         with:
           inlineScript: |
             az config set extension.use_dynamic_install=yes_without_prompt
-            az containerapp registry set -n dotnetcore-api-app-2023013012295 -g dwit-tech --server dotnetcoreapi20230130123723.azurecr.io --username  ${{ secrets.DOTNETCOREAPIAPP2023013012295_REGISTRY_USERNAME }} --password ${{ secrets.DOTNETCOREAPIAPP2023013012295_REGISTRY_PASSWORD }}
-            az containerapp update -n dotnetcore-api-app-2023013012295 -g dwit-tech --image dotnetcoreapi20230130123723.azurecr.io/dotnetcore-api-app-2023013012295:${{ github.sha }}
+            az containerapp registry set -ndwittechwalletservicewebapi-app -g dwit-tech --server dotnetcoreapi20230130123723.azurecr.io --username  ${{ secrets.DWITTECHWALLETSERVICEWEBAPIAPP_REGISTRY_USERNAME }} --password ${{ secrets.DWITTECHWALLETSERVICEWEBAPIAPP_REGISTRY_PASSWORD }}
+            az containerapp update -n dwittechwalletservicewebapi-app -g dwit-tech --image dotnetcoreapi20230130123723.azurecr.io/dwittechwalletservicewebapi-app:${{ github.sha }}

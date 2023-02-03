@@ -12,9 +12,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DwitTech.WalletService.Data.Context
 {
-    public class DefaultDbContext : DbContext
+    public class WalletDbContext : DbContext
     {
-        public DefaultDbContext(DbContextOptions options) : base(options)
+        public WalletDbContext(DbContextOptions options) : base(options)
         {
         }
 

@@ -18,9 +18,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DwitTech.WalletService.Data.Tests", "tests\DwitTech.WalletService.Data.Tests\DwitTech.WalletService.Data.Tests.csproj", "{D3CA6EB7-DD9A-4051-91C7-4EDB42AB5E87}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{CB78509F-6DEE-444F-A377-5034A23D9F61}"
-	ProjectSection(SolutionItems) = preProject
-		.github\workflows\dotnetcore-api-app-2023013012295-AutoDeployTrigger-d35c3221-6f0c-4747-bfe5-d137581a6f9f.yml = .github\workflows\dotnetcore-api-app-2023013012295-AutoDeployTrigger-d35c3221-6f0c-4747-bfe5-d137581a6f9f.yml
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2CD127B7-8FA1-4D44-847B-D86EA93801F8}"
 	ProjectSection(SolutionItems) = preProject

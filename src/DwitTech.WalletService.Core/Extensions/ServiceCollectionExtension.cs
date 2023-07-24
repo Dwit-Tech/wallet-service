@@ -1,15 +1,13 @@
-﻿using DwitTech.WalletService.Data.Context;
+﻿using DwitTech.WalletService.Core.Interfaces;
+using DwitTech.WalletService.Core.Services;
+using DwitTech.WalletService.Data.Context;
+using DwitTech.WalletService.Data.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -30,12 +28,10 @@ namespace Microsoft.Extensions.DependencyInjection
 #if DEBUG
                 opt.EnableSensitiveDataLogging();
                 opt.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-
 #endif
             },
             contextLifetime: ServiceLifetime.Scoped,
             optionsLifetime: ServiceLifetime.Scoped);
-
 
             return service;
         }
@@ -44,6 +40,9 @@ namespace Microsoft.Extensions.DependencyInjection
         {
 
             service.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            service.AddScoped<IWalletService, WalletService>();
+            service.AddScoped<IWalletRepository, WalletRepository>();
+
             return service;
         }
 
@@ -56,16 +55,14 @@ namespace Microsoft.Extensions.DependencyInjection
             })
             .AddJwtBearer(options =>
             {
-                options.Authority = configuration["JWT:Authority"];
-                options.Audience = configuration["JWT:Audience"];
-
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
                     ValidateIssuer = true,
-                    ValidateLifetime = true,
+                    ValidateLifetime = false,
                     ValidateAudience = false,
-                    ValidAudiences = new List<string> { configuration["JWT:Audience"] },
+                    ValidIssuer = configuration["JWT_ISSUER"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT_KEY"]))
                 };
             });
         }

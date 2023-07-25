@@ -1,4 +1,8 @@
-﻿using DwitTech.WalletService.Data.Context;
+﻿using Confluent.Kafka;
+using DwitTech.WalletService.Core.Events;
+using DwitTech.WalletService.Core.Interfaces;
+using DwitTech.WalletService.Core.Services;
+using DwitTech.WalletService.Data.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -42,6 +46,21 @@ namespace Microsoft.Extensions.DependencyInjection
         {
 
             service.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            service.AddScoped<IEmailService, EmailService>();
+            service.AddScoped<EmailEventPublisher>();
+            service.AddHttpClient();
+            service.AddSingleton<IProducer<string, string>>(provider =>
+            {
+                var producerConfig = new ProducerConfig
+                {
+                    BootstrapServers = configuration["MESSAGE_BROKER_BOOTSTRAP_SERVERS"],
+                    ClientId = configuration["MESSAGE_BROKER_CLIENT_ID"],
+                    // Set other producer configuration properties as needed
+                };
+
+                return new ProducerBuilder<string, string>(producerConfig).Build();
+            });
+
             return service;
         }
 

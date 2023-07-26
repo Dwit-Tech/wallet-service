@@ -47,7 +47,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
             service.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             service.AddScoped<IEmailService, EmailService>();
-            service.AddScoped<EmailEventPublisher>();
+            service.AddScoped<IEmailEventPublisher, EmailEventPublisher>();
             service.AddHttpClient();
             service.AddSingleton<IProducer<string, string>>(provider =>
             {

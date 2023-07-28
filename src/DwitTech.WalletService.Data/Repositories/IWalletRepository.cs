@@ -11,7 +11,7 @@ namespace DwitTech.WalletService.Data.Repositories
     {
         Task CreateWallet(Wallet wallet);
         bool CheckCurrencyCode(string currencyCode);
-        bool CheckDuplicateWallet(string userName, string currencyCode);
+        bool CheckWalletExists(int userId, string currencyCode);
         Task<IEnumerable<Currency>> GetAllCurrencies();
         Task<Currency> GetCurrencyIdByCode(string currencyCode);
     }

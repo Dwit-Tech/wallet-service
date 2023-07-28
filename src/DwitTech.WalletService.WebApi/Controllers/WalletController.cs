@@ -40,13 +40,12 @@ namespace DwitTech.WalletService.WebApi.Controllers
             }
         }
 
-        [AllowAnonymous]
         [HttpPost("createwallet")]
         public async Task<IActionResult> CreateWallet([FromBody] CreateWalletRequest walletDetails)
         {
             try
             {
-                var result = await _walletService.CreateWallet(walletDetails.UserName, walletDetails.CurrencyCode.ToUpper());
+                var result = await _walletService.CreateWallet(walletDetails.UserId, walletDetails.CurrencyCode.ToUpper());
                 if (result)
                     return new CreatedResult("Wallet", null);
                 return BadRequest("Unable to create wallet. Please try again later");

@@ -6,7 +6,7 @@ namespace DwitTech.WalletService.Data.Entities
     public class Wallet:BaseEntity
     {
         [Required]
-        public string Username { get; set; }
+        public int UserId { get; set; }
 
         public double Balance { get; set; } = 0.0;
 

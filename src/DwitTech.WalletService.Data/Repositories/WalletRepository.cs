@@ -19,9 +19,9 @@ namespace DwitTech.WalletService.Data.Repositories
             return _dbContext.Currencies.Any(c => c.Code == currencyCode);
         }
 
-        public bool CheckDuplicateWallet(string userName, string currencyCode)
+        public bool CheckWalletExists(int userId, string currencyCode)
         {
-           return _dbContext.Wallets.Any(w => w.Username == userName && w.Currency.Code == currencyCode);
+            return _dbContext.Wallets.Any(w => w.UserId == userId && w.Currency.Code == currencyCode);
         }
 
         public async Task CreateWallet(Wallet wallet)

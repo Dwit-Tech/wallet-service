@@ -4,11 +4,8 @@ using System.ComponentModel.DataAnnotations;
 namespace DwitTech.WalletService.Data.Entities
 {
     [Index(nameof(Code), IsUnique = true)]
-    public class Currency
+    public class Currency : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required, MaxLength(3)]
         public string Code { get; set; }
 

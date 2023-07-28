@@ -40,7 +40,7 @@ namespace Microsoft.Extensions.DependencyInjection
         {
 
             service.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            service.AddScoped<IWalletService, WalletService>();
+            service.AddScoped<IWalletService, UserWalletService>();
             service.AddScoped<IWalletRepository, WalletRepository>();
 
             return service;
@@ -59,7 +59,7 @@ namespace Microsoft.Extensions.DependencyInjection
                 {
                     ValidateIssuerSigningKey = true,
                     ValidateIssuer = true,
-                    ValidateLifetime = false,
+                    ValidateLifetime = true,
                     ValidateAudience = false,
                     ValidIssuer = configuration["JWT_ISSUER"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT_KEY"]))

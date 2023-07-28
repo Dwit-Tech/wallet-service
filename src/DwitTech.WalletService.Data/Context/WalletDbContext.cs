@@ -24,11 +24,11 @@ namespace DwitTech.WalletService.Data.Context
 
             #region OwnedTypeSeed
             builder.Entity<Currency>().HasData(
-                new Currency { Id = 1, Code = "NGN", Name = "Nigerian Naira" },
-                new Currency { Id = 2, Code = "USD", Name = "US Dollar" },
-                new Currency { Id = 3, Code = "GBP", Name = "British Pound" },
-                new Currency { Id = 4, Code = "EUR", Name = "European Euro" },
-                new Currency { Id = 5, Code = "CAD", Name = "Canadian Dollar" });
+                new Currency { Id = 1, Code = "NGN", Name = "Nigerian Naira", CreatedBy = "Seed Data" },
+                new Currency { Id = 2, Code = "USD", Name = "US Dollar", CreatedBy = "Seed Data" },
+                new Currency { Id = 3, Code = "GBP", Name = "British Pound", CreatedBy = "Seed Data" },
+                new Currency { Id = 4, Code = "EUR", Name = "European Euro", CreatedBy = "Seed Data" },
+                new Currency { Id = 5, Code = "CAD", Name = "Canadian Dollar", CreatedBy = "Seed Data" });
             #endregion
         }
     }

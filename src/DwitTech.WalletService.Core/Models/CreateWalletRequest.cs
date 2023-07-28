@@ -6,8 +6,8 @@ namespace DwitTech.WalletService.Core.Models
     public class CreateWalletRequest
     {
         [Required]
-        [JsonPropertyName("userName")]
-        public string UserName { get; set; }
+        [JsonPropertyName("userId")]
+        public int UserId { get; set; }
 
         [Required]
         [JsonPropertyName("currencyCode")]

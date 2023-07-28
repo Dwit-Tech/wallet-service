@@ -10,6 +10,6 @@ namespace DwitTech.WalletService.Core.Interfaces
     public interface IWalletService
     {
         Task<IEnumerable<Currency>> GetAllCurrencies();
-        Task<bool> CreateWallet(string userName, string currencyType);
+        Task<bool> CreateWallet(int userId, string currencyType);
     }
 }

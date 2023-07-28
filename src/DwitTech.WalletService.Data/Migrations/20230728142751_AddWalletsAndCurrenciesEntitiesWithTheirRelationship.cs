@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace DwitTech.WalletService.Data.Migrations
 {
-    public partial class AddWalletAndCurrencyEntities : Migration
+    public partial class AddWalletsAndCurrenciesEntitiesWithTheirRelationship : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,7 +17,11 @@ namespace DwitTech.WalletService.Data.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Code = table.Column<string>(type: "character varying(3)", maxLength: 3, nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    CreatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ModifiedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "text", nullable: false),
+                    ModifiedBy = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -30,7 +34,7 @@ namespace DwitTech.WalletService.Data.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Username = table.Column<string>(type: "text", nullable: false),
+                    UserId = table.Column<int>(type: "integer", nullable: false),
                     Balance = table.Column<double>(type: "double precision", nullable: false),
                     CurrencyId = table.Column<int>(type: "integer", nullable: false),
                     CreatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -51,14 +55,14 @@ namespace DwitTech.WalletService.Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Currencies",
-                columns: new[] { "Id", "Code", "Name" },
+                columns: new[] { "Id", "Code", "CreatedBy", "CreatedOnUtc", "ModifiedBy", "ModifiedOnUtc", "Name" },
                 values: new object[,]
                 {
-                    { 1, "NGN", "Nigerian Naira" },
-                    { 2, "USD", "US Dollar" },
-                    { 3, "GBP", "British Pound" },
-                    { 4, "EUR", "European Euro" },
-                    { 5, "CAD", "Canadian Dollar" }
+                    { 1, "NGN", "Seed Data", new DateTime(2023, 7, 28, 14, 27, 50, 948, DateTimeKind.Utc).AddTicks(8953), null, null, "Nigerian Naira" },
+                    { 2, "USD", "Seed Data", new DateTime(2023, 7, 28, 14, 27, 50, 948, DateTimeKind.Utc).AddTicks(8958), null, null, "US Dollar" },
+                    { 3, "GBP", "Seed Data", new DateTime(2023, 7, 28, 14, 27, 50, 948, DateTimeKind.Utc).AddTicks(8960), null, null, "British Pound" },
+                    { 4, "EUR", "Seed Data", new DateTime(2023, 7, 28, 14, 27, 50, 948, DateTimeKind.Utc).AddTicks(8961), null, null, "European Euro" },
+                    { 5, "CAD", "Seed Data", new DateTime(2023, 7, 28, 14, 27, 50, 948, DateTimeKind.Utc).AddTicks(8963), null, null, "Canadian Dollar" }
                 });
 
             migrationBuilder.CreateIndex(

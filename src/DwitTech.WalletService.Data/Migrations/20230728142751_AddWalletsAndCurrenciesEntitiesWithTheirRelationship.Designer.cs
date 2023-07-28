@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DwitTech.WalletService.Data.Migrations
 {
     [DbContext(typeof(WalletDbContext))]
-    [Migration("20230724081051_AddWalletAndCurrencyEntities")]
-    partial class AddWalletAndCurrencyEntities
+    [Migration("20230728142751_AddWalletsAndCurrenciesEntitiesWithTheirRelationship")]
+    partial class AddWalletsAndCurrenciesEntitiesWithTheirRelationship
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,6 +37,19 @@ namespace DwitTech.WalletService.Data.Migrations
                         .HasMaxLength(3)
                         .HasColumnType("character varying(3)");
 
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedOnUtc")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("ModifiedOnUtc")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
@@ -53,30 +66,40 @@ namespace DwitTech.WalletService.Data.Migrations
                         {
                             Id = 1,
                             Code = "NGN",
+                            CreatedBy = "Seed Data",
+                            CreatedOnUtc = new DateTime(2023, 7, 28, 14, 27, 50, 948, DateTimeKind.Utc).AddTicks(8953),
                             Name = "Nigerian Naira"
                         },
                         new
                         {
                             Id = 2,
                             Code = "USD",
+                            CreatedBy = "Seed Data",
+                            CreatedOnUtc = new DateTime(2023, 7, 28, 14, 27, 50, 948, DateTimeKind.Utc).AddTicks(8958),
                             Name = "US Dollar"
                         },
                         new
                         {
                             Id = 3,
                             Code = "GBP",
+                            CreatedBy = "Seed Data",
+                            CreatedOnUtc = new DateTime(2023, 7, 28, 14, 27, 50, 948, DateTimeKind.Utc).AddTicks(8960),
                             Name = "British Pound"
                         },
                         new
                         {
                             Id = 4,
                             Code = "EUR",
+                            CreatedBy = "Seed Data",
+                            CreatedOnUtc = new DateTime(2023, 7, 28, 14, 27, 50, 948, DateTimeKind.Utc).AddTicks(8961),
                             Name = "European Euro"
                         },
                         new
                         {
                             Id = 5,
                             Code = "CAD",
+                            CreatedBy = "Seed Data",
+                            CreatedOnUtc = new DateTime(2023, 7, 28, 14, 27, 50, 948, DateTimeKind.Utc).AddTicks(8963),
                             Name = "Canadian Dollar"
                         });
                 });
@@ -108,9 +131,8 @@ namespace DwitTech.WalletService.Data.Migrations
                     b.Property<DateTime?>("ModifiedOnUtc")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 

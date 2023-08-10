@@ -1,7 +1,6 @@
-﻿using AutoMapper;
+using AutoMapper;
 using DwitTech.WalletService.Core.Dtos;
 using DwitTech.WalletService.Core.Interfaces;
-using DwitTech.WalletService.Core.Models;
 using DwitTech.WalletService.Data.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +13,7 @@ namespace DwitTech.WalletService.WebApi.Controllers
         private readonly ILogger<WalletController> _logger;
         private readonly IMapper _mapper;
 
-        public WalletController(IWalletService walletService, 
+        public WalletController(IWalletService walletService,
             ILogger<WalletController> logger,
             IMapper mapper)
         {
@@ -41,11 +40,11 @@ namespace DwitTech.WalletService.WebApi.Controllers
         }
 
         [HttpPost("createwallet")]
-        public async Task<IActionResult> CreateWallet([FromBody] CreateWalletRequest walletDetails)
+        public async Task<IActionResult> CreateWallet([FromBody] CreateWalletRequestDto createWalletRequest)
         {
             try
             {
-                var result = await _walletService.CreateWallet(walletDetails.UserId, walletDetails.CurrencyCode.ToUpper());
+                var result = await _walletService.CreateWallet(createWalletRequest);
                 if (result)
                     return new CreatedResult("Wallet", null);
                 return BadRequest("Unable to create wallet. Please try again later");

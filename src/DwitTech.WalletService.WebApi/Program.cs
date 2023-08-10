@@ -68,6 +68,7 @@ namespace DwitTech.WalletService.WebApi
 
             app.UseAuthorization();
 
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

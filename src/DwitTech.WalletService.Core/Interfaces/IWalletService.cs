@@ -1,4 +1,5 @@
-﻿using DwitTech.WalletService.Data.Entities;
+using DwitTech.WalletService.Core.Dtos;
+using DwitTech.WalletService.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,6 @@ namespace DwitTech.WalletService.Core.Interfaces
     public interface IWalletService
     {
         Task<IEnumerable<Currency>> GetAllCurrencies();
-        Task<bool> CreateWallet(int userId, string currencyType);
+        Task<bool> CreateWallet(CreateWalletRequestDto createWalletRequest);
     }
 }

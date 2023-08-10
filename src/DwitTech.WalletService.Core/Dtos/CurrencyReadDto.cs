@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using DwitTech.WalletService.Data.Entities;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;

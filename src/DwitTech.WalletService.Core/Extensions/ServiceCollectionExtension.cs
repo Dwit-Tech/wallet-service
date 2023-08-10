@@ -1,4 +1,4 @@
-﻿using Confluent.Kafka;
+using Confluent.Kafka;
 using DwitTech.WalletService.Core.Events;
 using DwitTech.WalletService.Core.Interfaces;
 using DwitTech.WalletService.Core.Services;

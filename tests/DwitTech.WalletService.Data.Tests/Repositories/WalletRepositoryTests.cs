@@ -1,4 +1,4 @@
-﻿using DwitTech.WalletService.Data.Context;
+using DwitTech.WalletService.Data.Context;
 using DwitTech.WalletService.Data.Entities;
 using DwitTech.WalletService.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +21,7 @@ namespace DwitTech.WalletService.Data.Tests.Repositories
             var options = new DbContextOptionsBuilder<WalletDbContext>()
                 .UseInMemoryDatabase(Guid.NewGuid().ToString()).Options;
 
-            using (var walletDbContext = new WalletDbContext(options))
+            using(var walletDbContext = new WalletDbContext(options))
             {
                 var walletRepo = new WalletRepository(walletDbContext);
 
@@ -119,7 +119,7 @@ namespace DwitTech.WalletService.Data.Tests.Repositories
                 Assert.Equal(result, currency);
             }
         }
-
+        
         [Fact]
         public async Task Check_GetCurrencyIdByCode_ThrowsInvalidOperationExceptionWhenCurrencyCodeIsInvalid()
         {
@@ -171,7 +171,7 @@ namespace DwitTech.WalletService.Data.Tests.Repositories
             }
         }
 
-        public void Dispose()
+            public void Dispose()
         {
         }
     }

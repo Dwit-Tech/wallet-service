@@ -1,4 +1,4 @@
-﻿using DwitTech.WalletService.Core.Dtos;
+using DwitTech.WalletService.Core.Dtos;
 using DwitTech.WalletService.Core.Exceptions;
 using DwitTech.WalletService.Core.Interfaces;
 using DwitTech.WalletService.Core.Models;
@@ -93,7 +93,7 @@ namespace DwitTech.WalletService.Core.Services
             await _walletRepository.CreateWallet(newWallet);
             _logger.LogInformation("Wallet for user with ID {userId} was created successfully", createWalletRequest.UserId);
 
-            var emailSent = await SendCreateWalletEmail(createWalletRequest);
+            bool emailSent = await SendCreateWalletEmail(createWalletRequest);
             return emailSent;
         }
 

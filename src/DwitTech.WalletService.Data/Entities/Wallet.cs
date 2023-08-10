@@ -1,9 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DwitTech.WalletService.Data.Entities
 {
-    public class Wallet : BaseEntity
+    public class Wallet:BaseEntity
     {
         [Required]
         public int UserId { get; set; }

@@ -1,4 +1,4 @@
-﻿namespace DwitTech.WalletService.Core.Exceptions
+namespace DwitTech.WalletService.Core.Exceptions
 {
     public class DuplicateRequestException : Exception
     {

@@ -21,4 +21,10 @@
     <ProjectReference Include="..\DwitTech.WalletService.Data\DwitTech.WalletService.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Templates\WalletCreationEmail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

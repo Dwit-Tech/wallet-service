@@ -47,6 +47,7 @@ namespace DwitTech.WalletService.WebApi
             builder.Services.ConfigureAuthentication(builder.Configuration);
 
             builder.Services.AddAuthorization();
+            builder.Services.AddHttpContextAccessor();
 
             var app = builder.Build();
 
@@ -58,14 +59,20 @@ namespace DwitTech.WalletService.WebApi
 
             app.UseSwagger();
             app.UseSwaggerUI();
+            app.UseRouting();
 
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
 
-            app.MapControllers();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
 
             app.SetupMigrations(app.Services, app.Configuration);
 
